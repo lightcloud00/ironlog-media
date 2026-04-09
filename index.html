@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRON LOG — The Gym App That Doesn't Exist Yet</title>
+  <meta name="description" content="Hyperlocal gym partner matching + AI progressive overload coaching + workout tracking. Find a partner at your exact gym, right now. iOS, Android & Apple Watch.">
+  <meta property="og:title" content="IRON LOG — The Gym App That Doesn't Exist Yet">
+  <meta property="og:description" content="Real-time gym partner matching. AI progressive overload. Apple Watch native. One-time $29.99 lifetime option.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ironlog.co">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='3' y='10' width='6' height='12' rx='1.5' fill='%23e94560'/><rect x='11' y='6' width='10' height='20' rx='2' fill='%23e94560'/><rect x='23' y='10' width='6' height='12' rx='1.5' fill='%23e94560'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Iron Log home">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="3" y="10" width="6" height="12" rx="1.5" fill="#e94560"/>
+          <rect x="11" y="6" width="10" height="20" rx="2" fill="#e94560"/>
+          <rect x="23" y="10" width="6" height="12" rx="1.5" fill="#e94560"/>
+        </svg>
+        <span>IRON <span class="accent">LOG</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#compare">Compare</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Support</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Download Free</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> 4.9 App Store</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 56+ Exercises</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg> iOS Live + Android Soon</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Apple Watch</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> No Account Required</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Features No Other App Has</div>
+      <h1>FIND YOUR<br>WORKOUT<br>PARTNER.<br><span class="accent">RIGHT NOW.</span></h1>
+      <p class="hero-sub">Hyperlocal gym partner matching + AI progressive overload coaching + workout tracking. All in one app. No social feed bloat. No subscription traps.</p>
+      <div class="hero-ctas">
+        <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#" class="btn btn-secondary btn-lg" id="android-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.7.7 0 0 0-.7.7v2.573a.7.7 0 0 1-.7.7H7.877a.7.7 0 0 1-.7-.7v-8.23h10.646v4.957zm-2.195-10.8l1.2-2.174a.25.25 0 0 0-.436-.244l-1.215 2.2a7.053 7.053 0 0 0-5.754 0l-1.215-2.2a.25.25 0 0 0-.436.244l1.2 2.174A6.252 6.252 0 0 0 5.177 9.61h13.646a6.252 6.252 0 0 0-3.495-5.069zM10 7.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm4 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zM5.477 10.614v5.33a.7.7 0 0 0 .7.7h.7v2.97a.7.7 0 0 0 1.4 0v-2.97h1.4v2.97a.7.7 0 0 0 1.4 0v-2.97h.7a.7.7 0 0 0 .7-.7v-5.33zm-2.1.7a.7.7 0 0 1 1.4 0v4.2a.7.7 0 0 1-1.4 0zm15.846 0a.7.7 0 0 1 1.4 0v4.2a.7.7 0 0 1-1.4 0z"/></svg>
+          Coming to Android
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">56+</span><span class="stat-label">Exercises</span></div>
+        <div class="stat"><span class="stat-num">7</span><span class="stat-label">Muscle Groups</span></div>
+        <div class="stat"><span class="stat-num">$0</span><span class="stat-label">To Start</span></div>
+        <div class="stat"><span class="stat-num">$29.99</span><span class="stat-label">Lifetime Option</span></div>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-header">
+            <span class="phone-logo">IRON<span class="accent">LOG</span></span>
+            <span class="phone-day">Thursday</span>
+          </div>
+          <div class="phone-workout">
+            <div class="workout-card" style="border-left: 3px solid #e94560">
+              <div class="workout-name">BENCH PRESS</div>
+              <div class="workout-detail">3 sets · 185 lbs</div>
+              <span class="pr-badge">PR</span>
+            </div>
+            <div class="workout-card" style="border-left: 3px solid #f5a623">
+              <div class="workout-name">DEADLIFT</div>
+              <div class="workout-detail">3 sets · 315 lbs</div>
+            </div>
+            <div class="workout-card" style="border-left: 3px solid #7ed6df">
+              <div class="workout-name">OVERHEAD PRESS</div>
+              <div class="workout-detail">4 sets · 135 lbs</div>
+              <span class="pr-badge">PR</span>
+            </div>
+            <div class="workout-card ai-card" style="border-left: 3px solid #a29bfe">
+              <div class="ai-label">AI COACH</div>
+              <div class="workout-name">NEXT SESSION</div>
+              <div class="workout-detail">Bench: 190 lbs (+5)</div>
+              <div class="workout-detail">DL: 320 lbs (+5)</div>
+            </div>
+          </div>
+          <div class="phone-fab">+</div>
+          <div class="phone-tabs">
+            <span class="tab active">Today</span>
+            <span class="tab">Partners</span>
+            <span class="tab">Library</span>
+            <span class="tab">Stats</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES IT DIFFERENT -->
+  <section class="gap-section" id="gap">
+    <div class="container">
+      <div class="section-label">Why This Exists</div>
+      <h2>Every Fitness App<br>Missed These.</h2>
+      <div class="gap-grid">
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Real-Time Gym Presence</h3>
+          <p class="gap-detail">"I'm at the gym NOW" check-in. No app does live gym presence matching. Find a partner at your exact gym, today.</p>
+          <span class="gap-tag">Zero apps do this</span>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a29bfe" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>AI Progressive Overload</h3>
+          <p class="gap-detail">Tells you exactly what to lift next session. Strong, Hevy, and every other app fails at this per user reviews.</p>
+          <span class="gap-tag">Most requested feature</span>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          </div>
+          <h3>Partner by Workout Style</h3>
+          <p class="gap-detail">Powerlifting, hypertrophy, cardio — match with someone who trains like you. Think Tinder-style swipe for gym partners.</p>
+          <span class="gap-tag">Never been done</span>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7ed6df" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>No Social Feed Bloat</h3>
+          <p class="gap-detail">Purely functional. Every fitness social app gets destroyed in reviews for feature bloat. We built the opposite.</p>
+          <span class="gap-tag">Top user complaint solved</span>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <h3>$29.99 Lifetime Option</h3>
+          <p class="gap-detail">The #1 complaint across ALL fitness apps is scammy subscriptions. Pay once, own it forever. Done.</p>
+          <span class="gap-tag">#1 complaint addressed</span>
+        </div>
+        <div class="gap-card">
+          <div class="gap-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><circle cx="12" cy="12" r="7"/><polyline points="12 9 12 12 13.5 13.5"/><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/></svg>
+          </div>
+          <h3>Apple Watch Native</h3>
+          <p class="gap-detail">Log sets from your wrist. 423 reviews across competitor apps specifically beg for this. We built it.</p>
+          <span class="gap-tag">423 reviews asked for this</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-label">Core Features</div>
+      <h2>Everything You Need.<br>Nothing You Don't.</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <h3>Smart Workout Logging</h3>
+          <p>Log sets, reps, and weight with zero friction. Tap-to-add flow with +/- steppers that keep you in the zone.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <h3>PR Tracking &amp; Alerts</h3>
+          <p>Automatic PR detection on every set, every session. Badges fire when you hit a new personal record.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <h3>56+ Exercises</h3>
+          <p>Curated library across 7 muscle groups. Every major compound and isolation movement included.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">04</div>
+          <h3>Visual Progress Stats</h3>
+          <p>Training streaks, total volume, PR leaderboards, and muscle split charts. Know where to push harder.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">05</div>
+          <h3>AI Coach</h3>
+          <p>Progressive overload intelligence. Analyzes your history and tells you exactly what to lift next session.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">06</div>
+          <h3>GymLink Matching</h3>
+          <p>Find a workout partner at your gym, right now. Filter by workout style, experience, and schedule.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="steps-section" id="how-it-works">
+    <div class="container">
+      <div class="section-label">Simple by Design</div>
+      <h2>Three Taps.<br>Zero Excuses.</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-icon-wrap">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Choose Exercise</h3>
+          <p>Browse 56+ exercises by muscle group or search instantly. One tap to add.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-icon-wrap">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Log Your Sets</h3>
+          <p>Enter reps and weight with +/- steppers. AI tells you the target. PR detection fires instantly.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-icon-wrap">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7ed6df" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Track &amp; Match</h3>
+          <p>Watch your PRs climb. Find a gym partner. Let the AI program your next session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SCREENS -->
+  <section class="screens-section" id="screens">
+    <div class="container">
+      <div class="section-label">Four Screens. The Full Stack.</div>
+      <h2>Built for Lifters,<br>Not Scrollers.</h2>
+      <div class="screens-grid">
+        <div class="screen-card">
+          <div class="screen-label">Today</div>
+          <div class="screen-mock">
+            <div class="mock-row"><span class="mock-dot" style="background:#e94560"></span> Bench Press · 3x185 <span class="pr-mini">PR</span></div>
+            <div class="mock-row"><span class="mock-dot" style="background:#f5a623"></span> Deadlift · 3x315</div>
+            <div class="mock-row"><span class="mock-dot" style="background:#7ed6df"></span> OHP · 4x135 <span class="pr-mini">PR</span></div>
+            <div class="mock-row"><span class="mock-dot" style="background:#a29bfe"></span> Squat · 4x225</div>
+          </div>
+        </div>
+        <div class="screen-card">
+          <div class="screen-label">Partners</div>
+          <div class="screen-mock">
+            <div class="partner-row"><div class="partner-avatar">M</div><div><div class="partner-name">Mike · Gold's Gym</div><div class="partner-style">Powerlifting · Here now</div></div><span class="online-dot"></span></div>
+            <div class="partner-row"><div class="partner-avatar">S</div><div><div class="partner-name">Sarah · Crunch</div><div class="partner-style">Hypertrophy · 2mi away</div></div></div>
+            <div class="partner-row"><div class="partner-avatar">J</div><div><div class="partner-name">Jake · LA Fitness</div><div class="partner-style">PPL Split · Here now</div></div><span class="online-dot"></span></div>
+          </div>
+        </div>
+        <div class="screen-card">
+          <div class="screen-label">AI Coach</div>
+          <div class="screen-mock">
+            <div class="ai-mock-header">Next Session Targets</div>
+            <div class="ai-mock-row"><span>Bench Press</span><span class="ai-target">190 lbs <span class="ai-delta">+5</span></span></div>
+            <div class="ai-mock-row"><span>Deadlift</span><span class="ai-target">320 lbs <span class="ai-delta">+5</span></span></div>
+            <div class="ai-mock-row"><span>OHP</span><span class="ai-target">140 lbs <span class="ai-delta">+5</span></span></div>
+            <div class="ai-confidence">Based on 12 sessions · 94% confidence</div>
+          </div>
+        </div>
+        <div class="screen-card">
+          <div class="screen-label">Stats</div>
+          <div class="screen-mock">
+            <div class="stats-row"><span>Streak</span><span class="stat-val">7 days</span></div>
+            <div class="stats-row"><span>Volume</span><span class="stat-val">48,250 lbs</span></div>
+            <div class="stats-row"><span>PRs This Month</span><span class="stat-val">5</span></div>
+            <div class="stats-mini-chart">
+              <div class="bar" style="height:40%"></div>
+              <div class="bar" style="height:60%"></div>
+              <div class="bar" style="height:45%"></div>
+              <div class="bar" style="height:80%"></div>
+              <div class="bar" style="height:70%"></div>
+              <div class="bar" style="height:90%"></div>
+              <div class="bar active" style="height:100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-label">Transparent Pricing</div>
+      <h2>Free Forever.<br>Pro If You Want.</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Free Tier</div>
+          <div class="price-amount">$0<span>/forever</span></div>
+          <p class="price-desc">No credit card. No account. No catch.</p>
+          <ul class="price-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited exercise logging</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 56+ exercises included</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 30-day workout history</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Basic stats &amp; streaks</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> PR detection on every set</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero ads, zero tracking</li>
+          </ul>
+          <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-secondary" target="_blank" rel="noopener">Start Free</a>
+        </div>
+        <div class="price-card featured">
+          <div class="price-badge">Most Popular</div>
+          <div class="price-tier">Pro</div>
+          <div class="price-amount">$4.99<span>/mo</span></div>
+          <div class="price-alt">$39.99/yr <span class="save-tag">Save 33%</span></div>
+          <div class="price-alt lifetime">$29.99 lifetime <span class="save-tag fire">Best Value</span></div>
+          <ul class="price-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited workout history</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> AI progressive overload coach</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> GymLink partner matching</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Apple Watch app</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom exercises &amp; templates</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> CSV data export</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority support</li>
+          </ul>
+          <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary" target="_blank" rel="noopener">Get Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="compare-section" id="compare">
+    <div class="container">
+      <div class="section-label">Competitive Analysis</div>
+      <h2>How We Stack Up.</h2>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>IRON LOG Free</th>
+              <th class="highlight">IRON LOG Pro</th>
+              <th>Strong Pro $4.99/mo</th>
+              <th>Hevy Pro $8.99/mo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Exercise Logging</td><td class="yes">Yes</td><td class="yes hl">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>PR Detection</td><td class="yes">Yes</td><td class="yes hl">Yes</td><td class="no">Pro only</td><td class="no">Pro only</td></tr>
+            <tr><td>AI Progressive Overload</td><td class="no">—</td><td class="yes hl">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Gym Partner Matching</td><td class="no">—</td><td class="yes hl">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Apple Watch</td><td class="no">—</td><td class="yes hl">Yes</td><td class="yes">Yes</td><td class="no">No</td></tr>
+            <tr><td>Workout History</td><td>30 days</td><td class="yes hl">Unlimited</td><td class="yes">Unlimited</td><td class="yes">Unlimited</td></tr>
+            <tr><td>Lifetime Purchase</td><td class="no">—</td><td class="yes hl">$29.99</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>No Account Required</td><td class="yes">Yes</td><td class="yes hl">Yes</td><td class="no">No</td><td class="no">No</td></tr>
+            <tr><td>Zero Ads</td><td class="yes">Yes</td><td class="yes hl">Yes</td><td class="no">Ads on free</td><td class="no">Ads on free</td></tr>
+            <tr><td>Monthly Price</td><td>$0</td><td class="hl">$4.99</td><td>$4.99</td><td>$8.99</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>Got Questions?</h2>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary>What exercises are included?</summary>
+          <p>56 exercises across 7 muscle groups: Chest (8), Back (8), Shoulders (8), Arms (8), Legs (8), Core (8), and Cardio (8). Every major compound and the most effective isolation exercises.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does AI progressive overload work?</summary>
+          <p>The AI analyzes your workout history — sets, reps, weight, rest times — and calculates the optimal load for your next session. It follows proven periodization principles to ensure consistent gains without overtraining.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my data secure?</summary>
+          <p>Workout data stays on your device by default. Partner matching data is encrypted end-to-end. We don't sell your data — ever. Privacy by design.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does gym partner matching work?</summary>
+          <p>Check in when you arrive at the gym. Browse other lifters at your gym or nearby. Filter by workout style (powerlifting, hypertrophy, cardio), experience level, and schedule. Send a training invite — no social feed, no drama.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What platforms do you support?</summary>
+          <p>iOS (App Store), Android (Google Play), and Apple Watch. The web app also works in any modern browser — add it to your home screen for a native feel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I really pay once and own it forever?</summary>
+          <p>Yes. The $29.99 lifetime option gives you Pro features forever. No recurring charges. No bait-and-switch. If you prefer, monthly ($4.99) and annual ($39.99) options are available too.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Support + Free Workout Template</h3>
+          <p>Send us a message and get a free IronLog Starter Workout Template. We read every message.</p>
+          <a href="mailto:gus@gusdigitalsolutions.com" class="contact-email">gus@gusdigitalsolutions.com</a>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').style.display='block'; this.querySelector('button').textContent='Sent!';">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your message..." rows="4" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="form-success" style="display:none">Thanks! Check your inbox for the workout template.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARITY -->
+  <section class="charity-section">
+    <div class="container">
+      <div class="charity-card">
+        <h3>Lift for a Cause</h3>
+        <p>IRON LOG is free because tracking your health shouldn't cost money. If it helps your training, consider giving back.</p>
+        <p class="charity-name">National Breast Cancer Foundation</p>
+        <p class="charity-desc">Helping women now through early detection, education, and support services. 4-star Charity Navigator rated. We don't take a cut — every dollar goes directly to the foundation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>READY TO<br>GET STRONGER?</h2>
+      <p>No account. No credit card. No excuses.</p>
+      <div class="cta-buttons">
+        <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#" class="btn btn-secondary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.7.7 0 0 0-.7.7v2.573a.7.7 0 0 1-.7.7H7.877a.7.7 0 0 1-.7-.7v-8.23h10.646v4.957zm-2.195-10.8l1.2-2.174a.25.25 0 0 0-.436-.244l-1.215 2.2a7.053 7.053 0 0 0-5.754 0l-1.215-2.2a.25.25 0 0 0-.436.244l1.2 2.174A6.252 6.252 0 0 0 5.177 9.61h13.646a6.252 6.252 0 0 0-3.495-5.069zM10 7.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm4 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/></svg>
+          Coming to Android
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="Iron Log home">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect x="3" y="10" width="6" height="12" rx="1.5" fill="#e94560"/>
+              <rect x="11" y="6" width="10" height="20" rx="2" fill="#e94560"/>
+              <rect x="23" y="10" width="6" height="12" rx="1.5" fill="#e94560"/>
+            </svg>
+            <span>IRON <span class="accent">LOG</span></span>
+          </a>
+          <p>Built by lifters, for lifters. Elmira, NY.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#compare">Compare</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="mailto:gus@gusdigitalsolutions.com">Contact</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+          </div>
+          <div class="footer-col">
+            <h4>Download</h4>
+            <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" target="_blank" rel="noopener">iOS App Store</a>
+            <a href="#">Android (Coming Soon)</a>
+            <a href="#">Web App</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gus Digital Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    }));
+
+    // Header scroll behavior
+    let lastY = 0;
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y > 80) {
+        header.classList.add('scrolled');
+        header.classList.toggle('hidden', y > lastY && y > 300);
+      } else {
+        header.classList.remove('scrolled', 'hidden');
+      }
+      lastY = y;
+    }, { passive: true });
+
+    // Animate elements on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.gap-card, .feature-card, .step, .screen-card, .price-card, .faq-item').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -245,9 +245,9 @@ section h2 {
 .bar { width: 100%; background: var(--border); border-radius: 2px; transition: background 0.3s; }
 .bar.active { background: var(--primary); }
 
-/* ─── PRICING ─── */
-.pricing-section { padding: 100px 0; background: var(--bg); }
-.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; }
+/* --- RELEASE --- */
+.release-section { padding: 100px 0; background: var(--bg); }
+.release-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; }
 .price-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 36px; opacity: 0; transform: translateY(20px); transition: all 0.4s;
@@ -366,13 +366,13 @@ section h2 {
 
   .gap-grid, .features-grid, .steps-grid { grid-template-columns: 1fr; }
   .screens-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .release-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; }
   .footer-links { gap: 32px; flex-wrap: wrap; }
 
   section h2 { font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem); margin-bottom: 32px; }
-  .gap-section, .features-section, .steps-section, .screens-section, .pricing-section, .faq-section, .contact-section { padding: 64px 0; }
+  .gap-section, .features-section, .steps-section, .screens-section, .release-section, .faq-section, .contact-section { padding: 64px 0; }
 }
 
 @media (max-width: 480px) {

@@ -247,6 +247,14 @@ section h2 {
 
 /* --- RELEASE --- */
 .release-section { padding: 100px 0; background: var(--bg); }
+.section-intro {
+  max-width: 720px;
+  margin: -12px auto 32px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+}
 .release-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; }
 .price-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);

@@ -4,3 +4,8 @@ node_modules/
 dist/
 build/
 .wrangler/
+
+# Cruft from prior dev sessions — never check in
+hf_*.mp4
+*.mp4
+.hf_*

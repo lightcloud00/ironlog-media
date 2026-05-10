@@ -129,7 +129,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) =>
 export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
   const method = request.method.toUpperCase();
   if (method === "OPTIONS") {
-    return new Response(null, { status: 204, headers: JSON_HEADERS });
+    return new Response(null, { status: 204, headers: responseHeaders(request) });
   }
   if (method === "POST") {
     return handleContact(request, env);

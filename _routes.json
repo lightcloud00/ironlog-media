@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "Force Cloudflare Pages to route /api/* to functions/api/* instead of treating them as static asset 404s. Created 2026-05-10T17:25Z to fix /api/contact returning 405 (Pages was not auto-detecting functions/ directory).",
+  "include": ["/api/*"],
+  "exclude": []
+}

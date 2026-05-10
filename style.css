@@ -38,6 +38,24 @@ a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .accent { color: var(--primary); }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+:where(a, button, summary, input, textarea):focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(126, 214, 223, 0.18), 0 0 0 1px var(--cyan);
+}
 
 /* ─── HEADER ─── */
 .header {
@@ -156,9 +174,9 @@ section h2 {
 .gap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .gap-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 28px; transition: all 0.4s; opacity: 0; transform: translateY(20px);
+  padding: 28px; transition: all 0.4s;
 }
-.gap-card.visible { opacity: 1; transform: translateY(0); }
+.gap-card.visible, .js .gap-card.visible { opacity: 1; transform: translateY(0); }
 .gap-card:hover { border-color: var(--primary); box-shadow: 0 0 30px var(--primary-glow); transform: translateY(-4px); }
 .gap-icon { margin-bottom: 16px; }
 .gap-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -174,9 +192,9 @@ section h2 {
 .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .feature-card {
   background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 28px; transition: all 0.4s; opacity: 0; transform: translateY(20px);
+  padding: 28px; transition: all 0.4s;
 }
-.feature-card.visible { opacity: 1; transform: translateY(0); }
+.feature-card.visible, .js .feature-card.visible { opacity: 1; transform: translateY(0); }
 .feature-card:hover { border-color: var(--text-faint); }
 .feature-num { font-family: var(--font-display); font-weight: 700; font-size: 32px; color: var(--primary); opacity: 0.3; margin-bottom: 12px; }
 .feature-card h3 { font-family: var(--font-display); font-size: 17px; font-weight: 600; margin-bottom: 8px; }
@@ -185,8 +203,8 @@ section h2 {
 /* ─── STEPS ─── */
 .steps-section { padding: 100px 0; background: var(--bg); }
 .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-.step { text-align: center; opacity: 0; transform: translateY(20px); transition: all 0.4s; }
-.step.visible { opacity: 1; transform: translateY(0); }
+.step { text-align: center; transition: all 0.4s; }
+.step.visible, .js .step.visible { opacity: 1; transform: translateY(0); }
 .step-number { font-family: var(--font-display); font-weight: 700; font-size: 48px; color: var(--primary); opacity: 0.2; margin-bottom: 12px; }
 .step-icon-wrap { margin: 0 auto 16px; width: 72px; height: 72px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
 .step h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: 8px; }
@@ -197,9 +215,9 @@ section h2 {
 .screens-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .screen-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 20px; opacity: 0; transform: translateY(20px); transition: all 0.4s;
+  padding: 20px; transition: all 0.4s;
 }
-.screen-card.visible { opacity: 1; transform: translateY(0); }
+.screen-card.visible, .js .screen-card.visible { opacity: 1; transform: translateY(0); }
 .screen-label { font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-bottom: 14px; color: var(--primary); }
 .screen-mock { display: flex; flex-direction: column; gap: 8px; }
 .mock-row {
@@ -228,7 +246,7 @@ section h2 {
   box-shadow: 0 0 6px rgba(106,176,76,0.5);
 }
 
-/* AI Coach screen */
+/* PR context screen */
 .ai-mock-header { font-size: 12px; font-weight: 600; color: var(--purple); margin-bottom: 4px; }
 .ai-mock-row {
   display: flex; justify-content: space-between; font-size: 12px;
@@ -258,10 +276,10 @@ section h2 {
 .release-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; }
 .price-card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 36px; opacity: 0; transform: translateY(20px); transition: all 0.4s;
+  padding: 36px; transition: all 0.4s;
   position: relative;
 }
-.price-card.visible { opacity: 1; transform: translateY(0); }
+.price-card.visible, .js .price-card.visible { opacity: 1; transform: translateY(0); }
 .price-card.featured { border-color: var(--primary); box-shadow: 0 0 40px var(--primary-glow); }
 .price-badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
@@ -287,9 +305,9 @@ section h2 {
 .faq-grid { display: flex; flex-direction: column; gap: 12px; max-width: 700px; }
 .faq-item {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  overflow: hidden; opacity: 0; transform: translateY(10px); transition: all 0.4s;
+  overflow: hidden; transition: all 0.4s;
 }
-.faq-item.visible { opacity: 1; transform: translateY(0); }
+.faq-item.visible, .js .faq-item.visible { opacity: 1; transform: translateY(0); }
 .faq-item summary {
   padding: 18px 24px; font-family: var(--font-display); font-weight: 600; font-size: 15px;
   cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between;
@@ -311,7 +329,20 @@ section h2 {
   transition: border-color var(--transition);
 }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--primary); }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(126, 214, 223, 0.12);
+}
 .contact-form textarea { resize: vertical; }
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.contact-form button:disabled { opacity: 0.75; cursor: wait; }
 .form-success { color: var(--green); font-size: 14px; margin-top: 8px; }
 
 /* ─── CHARITY ─── */

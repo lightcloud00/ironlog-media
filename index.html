@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260519-cta-v1">
 </head>
 <body>
 
@@ -38,11 +38,11 @@
       </a>
       <nav class="nav" id="nav" aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#release">Current Release</a>
-        <a href="/blog/">Blog</a>
+        <a href="#release">Release Plan</a>
+        <a href="#compare">Roadmap</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Support</a>
+        <a href="#more-apps">Our Apps</a>
       </nav>
       <div class="header-actions">
         <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get IronLog</a>
@@ -64,23 +64,47 @@
     </div>
   </div>
 
+  <!-- CROSS-PROMO (header strip) -->
+  <style id="xpromo-css">
+  .xpromo-strip{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:9px 18px;font-size:13px;font-weight:600;text-align:center;color:#fff;background:linear-gradient(90deg,var(--primary,#e94560),var(--primary-hover,#d63651));border-bottom:1px solid rgba(0,0,0,.2);text-decoration:none;transition:filter .2s}
+  .xpromo-strip:hover{filter:brightness(1.08)}
+  .xpromo-strip-tag{background:rgba(255,255,255,.22);padding:2px 8px;border-radius:999px;font-size:11px;letter-spacing:.5px}
+  .xpromo-strip strong{font-weight:800}
+  .xpromo-section{max-width:1200px;margin:0 auto;padding:40px 24px 64px}
+  .xpromo-card{background:var(--surface,#16162e);border:1px solid var(--border,#2a2a4a);border-radius:var(--radius,12px);padding:44px 36px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.28)}
+  .xpromo-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted,#9a98a8);margin-bottom:10px}
+  .xpromo-card h2{font-size:clamp(1.6rem,1rem + 3vw,2.4rem);margin:0 0 12px;color:var(--text,#e8e6e3);font-weight:800}
+  .xpromo-accent{color:var(--primary,#e94560)}
+  .xpromo-card p{max-width:560px;margin:0 auto 26px;color:var(--text-muted,#9a98a8);font-size:15px;line-height:1.6}
+  .xpromo-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .xpromo-btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s,filter .2s}
+  .xpromo-btn:hover{transform:translateY(-2px)}
+  .xpromo-btn-primary{background:var(--primary,#e94560);color:#fff}
+  .xpromo-btn-primary:hover{filter:brightness(1.08)}
+  .xpromo-btn-ghost{background:transparent;color:var(--text,#e8e6e3);border:1px solid var(--border,#2a2a4a)}
+  @media(max-width:560px){.xpromo-card{padding:32px 20px}}
+  </style>
+  <a class="xpromo-strip" href="https://apps.apple.com/us/app/hungrecover-bac-recovery/id6766139744" target="_blank" rel="noopener">
+    <span class="xpromo-strip-tag">ALSO BY US</span>
+    <span>Like IronLog? Try <strong>HungRecover</strong> — free smart recovery &amp; BAC timing. Tap to get it →</span>
+  </a>
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge">Log Sets. Track PRs.</div>
-      <h1>TRACK EVERY<br>SET.<br>KEEP EVERY<br><span class="accent">WORKOUT.</span></h1>
-      <p class="hero-sub">Local-first workout and PR tracking for iPhone. Log sets, browse exercise history, review stats, and keep your training data on-device. The current iPhone release is free-first while we harden the app for athletes. No Android or Google Play release is available today.</p>
+      <h1>TRACK EVERY SET.<br>KEEP EVERY PR.<br><span class="accent">FREE-FIRST.</span></h1>
+      <p class="hero-sub">IronLog is a local-first iPhone training log for set logging, PR history, exercise search, plate math, rest timing, day notes, and simple meal tracking. No account required, and the next build keeps the core tracker free while Pro stays parked.</p>
       <div class="hero-ctas">
         <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download for iOS
+          Download Free on the App Store
         </a>
-        <a href="#features" class="btn btn-secondary btn-lg">View Features</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num">Built-in</span><span class="stat-label">Library</span></div>
-        <div class="stat"><span class="stat-num">Major</span><span class="stat-label">Muscle Groups</span></div>
-        <div class="stat"><span class="stat-num">$0</span><span class="stat-label">To Start</span></div>
+        <div class="stat"><span class="stat-num">62</span><span class="stat-label">Starter Exercises</span></div>
+        <div class="stat"><span class="stat-num">PR</span><span class="stat-label">Edit/Delete</span></div>
+        <div class="stat"><span class="stat-num">Meals</span><span class="stat-label">Local v1</span></div>
         <div class="stat"><span class="stat-num">Local</span><span class="stat-label">Storage</span></div>
       </div>
     </div>
@@ -218,68 +242,68 @@
   <!-- FEATURES -->
   <section class="features-section" id="features">
     <div class="container">
-      <div class="section-label">Core Features</div>
-      <h2>Everything You Need.<br>Nothing You Don't.</h2>
+      <div class="section-label">Current Build Candidate</div>
+      <h2>The Features We Can<br>Actually Stand Behind.</h2>
       <div class="features-grid">
         <div class="feature-card feature-card--highlight">
           <div class="feature-num">01</div>
-          <h3>Autosave</h3>
-          <p>Every set is designed to save quickly, so your session can survive normal app closes, interruptions, and relaunches.</p>
+          <h3>PR + Set Logging</h3>
+          <p>Log weight, reps, notes, and personal records with focused validation and recent same-movement context.</p>
         </div>
         <div class="feature-card feature-card--new">
           <div class="feature-num">02</div>
-          <h3>PR Context</h3>
-          <p>Review personal-record context and logged history so your next session starts with better information.</p>
+          <h3>Record Management</h3>
+          <p>Edit and delete records from Dashboard, History, and Movement Detail with confirmation and PR promotion behavior.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">03</div>
-          <h3>Smart Workout Logging</h3>
-          <p>Log sets, reps, and weight with zero friction. Tap-to-add flow with exercise notes for tracking how each set felt.</p>
+          <h3>Exercise Library</h3>
+          <p>Bundled starter catalog with 62 free exercises, search, filters, quick-add presets, and custom movements.</p>
         </div>
         <div class="feature-card feature-card--new">
           <div class="feature-num">04</div>
-          <h3>Focused Session Flow</h3>
-          <p>Keep the workout moving with lightweight exercise entry, recent context, and fewer taps between working sets.</p>
+          <h3>Dashboard Shortcuts</h3>
+          <p>Recent PR cards link into movement detail and expose quick edit/delete actions without turning the dashboard into clutter.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">05</div>
-          <h3>Workout History</h3>
-          <p>Review past sessions and use your own history as the fastest way to repeat what worked.</p>
+          <h3>History Day Notes</h3>
+          <p>Capture daily training context alongside record history so a workout day can have more than per-set notes.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">06</div>
-          <h3>Session Timing</h3>
-          <p>Keep an eye on the pace of the workout without turning the app into a distraction.</p>
+          <h3>Meal Tracker v1</h3>
+          <p>Manual local food and meal entries for daily calories and macros, kept intentionally simple for the next build.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">07</div>
-          <h3>PR Tracking &amp; Stats</h3>
-          <p>Review exercise history, training stats, and PR-focused progress as features are available in your installed build.</p>
+          <h3>Plate Calculator</h3>
+          <p>Support for lb/kg flows, custom bar weights, full plate inventory, and heavy-target layout containment.</p>
         </div>
         <div class="feature-card feature-card--new">
           <div class="feature-num">08</div>
-          <h3>Training Utilities</h3>
-          <p>Useful lifting helpers and extra review surfaces stay on the roadmap until they are ready for public release.</p>
+          <h3>Rest Timer</h3>
+          <p>Session timing tools stay available as part of the free core utility set, not hidden behind the parked Pro layer.</p>
         </div>
         <div class="feature-card feature-card--new">
           <div class="feature-num">09</div>
-          <h3>Training Notes</h3>
-          <p>When supported by your installed build, extra training notes stay alongside the rest of your local workout history.</p>
+          <h3>CSV Import + Export</h3>
+          <p>Bring in workout CSVs and export your training log with a readable file flow for your own records.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">10</div>
-          <h3>Workout Timer</h3>
-          <p>Elapsed time tracker running during your session. Pause and resume. See exactly how long each workout takes.</p>
+          <h3>Settings Shortcuts</h3>
+          <p>Jump between Dashboard, History, Movement Library, Body Measurements, Plate Calculator, and preferences faster.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">11</div>
-          <h3>Exercise Library</h3>
-          <p>A built-in library across major muscle groups, organized for quick search and fast logging.</p>
+          <h3>Free-First Pro Posture</h3>
+          <p>The review build suppresses purchase prompts and keeps core logging, export, timers, and calculator tools free.</p>
         </div>
         <div class="feature-card">
           <div class="feature-num">12</div>
-          <h3>Local Training History</h3>
-          <p>Keep your logged workouts close on your device, with history views that help you repeat what worked.</p>
+          <h3>Local-First Data</h3>
+          <p>Workout, note, and meal entries stay on-device by default unless you choose to send information to support.</p>
         </div>
       </div>
     </div>
@@ -392,44 +416,111 @@
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- ROADMAP TABLE -->
+  <section class="comparison-section" id="compare">
+    <div class="container">
+      <div class="section-label">FEATURES.md Roadmap</div>
+      <h2>What Is In This Build.<br>What Comes Later.</h2>
+      <p class="section-intro">This page mirrors the active feature plan without pretending roadmap work is already shipped. The next build stays local-first and free-first; integrations, AI, social, barcode, photo, and paid Pro work wait for separate proof.</p>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th><span class="compare-brand">Next Build Candidate</span></th>
+              <th><span class="compare-brand">Roadmap / Gated</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Exercises</td>
+              <td class="compare-good">62 bundled starter exercises, search, filters, quick add</td>
+              <td><span class="compare-planned">Licensed demos and broader catalog later</span></td>
+            </tr>
+            <tr>
+              <td>Logging</td>
+              <td class="compare-good">PR/set logging, edit/delete, recent context, day notes</td>
+              <td><span class="compare-planned">Supersets, dropsets, giant sets, templates</span></td>
+            </tr>
+            <tr>
+              <td>Nutrition</td>
+              <td class="compare-good">Manual local calories/macros</td>
+              <td><span class="compare-planned">USDA, Open Food Facts, barcode, photos</span></td>
+            </tr>
+            <tr>
+              <td>Utilities</td>
+              <td class="compare-good">Plate calculator, rest timer, CSV import/export</td>
+              <td><span class="compare-planned">Warm-up calculator polish, widgets</span></td>
+            </tr>
+            <tr>
+              <td>Body + Recovery</td>
+              <td><span class="compare-ok">Body measurement surfaces are in active source</span></td>
+              <td><span class="compare-planned">Recovery/readiness proof, HealthKit device QA</span></td>
+            </tr>
+            <tr>
+              <td>Voice + Watch</td>
+              <td><span class="compare-ok">Source experiments exist, not a website promise</span></td>
+              <td><span class="compare-planned">Device-tested voice logging, Apple Watch, ring close</span></td>
+            </tr>
+            <tr>
+              <td>Pro</td>
+              <td class="compare-good">Free-first; purchase prompts parked</td>
+              <td><span class="compare-planned">Pro relaunch only after v2 is stable</span></td>
+            </tr>
+            <tr>
+              <td>Community</td>
+              <td><span class="compare-ok">No account or social graph required</span></td>
+              <td><span class="compare-planned">Leaderboards/challenges only after privacy design</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-disclaimer">Roadmap items are not promised in the current public App Store build. They require feature proof, privacy review, and release approval before this website should claim them as live.</p>
+    </div>
+  </section>
+
+  <!-- RELEASE STATUS -->
   <section class="release-section" id="release">
     <div class="container">
-      <div class="section-label">Current Release</div>
-      <h2>Free-first today.<br>No purchase prompt in review.</h2>
-      <p class="section-intro">IronLog is available on the iPhone App Store. The active review build keeps core logging and the current utility set free while any paid Pro layer is held for a later, fully disclosed update. No Android or Google Play release is available today.</p>
+      <div class="section-label">Release Status</div>
+      <h2>New Build After QA.<br>No Fast Resubmit.</h2>
+      <p class="section-intro">The active path is a new IronLog build after QA, with website, metadata, screenshots, review notes, and legal copy aligned to the exact binary. The public App Store version may differ until that update is approved.</p>
       <div class="release-grid">
         <div class="price-card">
-          <div class="price-tier">Live Today</div>
-          <div class="price-amount">Free</div>
-          <p class="price-desc">Current iPhone release path with workout logging and utility features available without purchase.</p>
+          <div class="price-tier">Ready To Claim Locally</div>
+          <div class="price-amount">Core</div>
+          <p class="price-desc">Workout logging, PR history, exercise library, day notes, meal tracker v1, plate calculator, rest timer, CSV, and settings shortcuts are represented in the local QA lane.</p>
           <ul class="price-features">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited exercise logging</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Built-in exercise library included</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Workout history</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Stats and progress review</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> CSV export, plate calculator, and rest timer</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom movement categories</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Local-first storage</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No account required</li>
+            <li>Free-first review posture</li>
+            <li>Local-only data model for meals and notes</li>
+            <li>GitHub-tracked bugs and proof logs before release</li>
           </ul>
-          <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-secondary" target="_blank" rel="noopener">Download for iOS</a>
         </div>
         <div class="price-card featured">
-          <div class="price-badge">Planned</div>
-          <div class="price-tier">Future Paid Layer</div>
-          <div class="price-amount">Not enabled</div>
-          <div class="price-alt">No subscription terms are active in this review build</div>
+          <div class="price-badge">Parked</div>
+          <div class="price-tier">Do Not Claim As Live Yet</div>
+          <div class="price-amount">Later</div>
+          <p class="price-desc">Voice logging, Apple Fitness ring-close, Watch, widgets, backend sync, barcode/photo nutrition, AI coaching, public leaderboards, and paid Pro activation need separate proof and approval.</p>
           <ul class="price-features">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> No monthly or annual purchase prompt in this build</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Any future pricing will be disclosed before purchase</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Restore and manage controls return only with a paid relaunch</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Core workout logging remains free</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Paid roadmap stays out of this review build</li>
+            <li>No backend or account requirement in this build</li>
+            <li>No USDA/Open Food Facts/barcode/photo promises yet</li>
+            <li>No Pro subscription prompt in the review build</li>
           </ul>
-          <p class="price-desc">This page is aligned to the free-first resubmission route. If IronLog Pro returns later, pricing and renewal terms will be shown clearly before any purchase.</p>
-          <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary" target="_blank" rel="noopener">View in the App Store</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINGLE APP STORE CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>TRAINING LOGGING<br>WITHOUT ACCOUNT FRICTION.</h2>
+      <p>Free-first core tracking now, with the bigger roadmap only claimed when it has build-candidate proof.</p>
+      <div class="cta-buttons">
+        <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download Free on the App Store
+        </a>
       </div>
     </div>
   </section>
@@ -446,7 +537,7 @@
         </details>
         <details class="faq-item">
           <summary>What exercises are included?</summary>
-          <p>The current public release includes a built-in exercise library across major muscle groups, with quick search and one-tap add flows.</p>
+          <p>The next build candidate uses a bundled starter catalog with 62 free exercises across major movement categories, plus search, filters, quick-add presets, and custom movements.</p>
         </details>
         <details class="faq-item">
           <summary>How is my data stored?</summary>
@@ -458,7 +549,7 @@
         </details>
         <details class="faq-item">
           <summary>What tools are in the active codebase?</summary>
-          <p>The live iPhone release focuses on exercise logging, workout history, stats, PR context, and local-first storage. Broader experiments like extra platform support are still being reviewed before public rollout.</p>
+          <p>The active IronLog source includes PR/set logging, exercise library wiring, History day notes, Meal Tracker v1, plate calculator, rest timer, CSV flows, and settings shortcuts. Voice, Watch, HealthKit ring-close, widgets, AI, social, and barcode/photo nutrition remain proof-gated roadmap work.</p>
         </details>
         <details class="faq-item">
           <summary>What platforms do you support?</summary>
@@ -517,6 +608,25 @@
     </div>
   </section>
 
+  <div class="cta-popup" id="cta-popup" aria-hidden="true">
+    <div class="cta-popup-backdrop" data-popup-close></div>
+    <section class="cta-popup-card" role="dialog" aria-modal="true" aria-labelledby="cta-popup-title" aria-describedby="cta-popup-desc">
+      <button class="cta-popup-close" type="button" aria-label="Close update popup" data-popup-close>&times;</button>
+      <span class="cta-popup-kicker">IronLog updates</span>
+      <h2 id="cta-popup-title">Get training-log product notes.</h2>
+      <p id="cta-popup-desc">Short updates when IronLog adds workout-tracking improvements, release notes, or support changes.</p>
+      <form class="contact-form cta-popup-form" id="cta-popup-form" data-endpoint="/api/contact">
+        <input type="hidden" name="source" value="ironlog.co-random-popup">
+        <input type="hidden" name="name" value="IronLog updates subscriber">
+        <input type="hidden" name="message" value="Please send me IronLog product updates.">
+        <label class="sr-only" for="cta-popup-email">Email address</label>
+        <input id="cta-popup-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" maxlength="254" required>
+        <button type="submit" class="btn btn-primary">Get updates</button>
+        <div class="form-success cta-popup-success" role="status" aria-live="polite" style="display:none"></div>
+      </form>
+    </section>
+  </div>
+
   <!-- FINAL CTA -->
   <section class="cta-section">
     <div class="container">
@@ -525,14 +635,48 @@
       <div class="cta-buttons">
         <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download for iOS
-        </a>
-        <a href="/blog/" class="btn btn-secondary btn-lg">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.7.7 0 0 0-.7.7v2.573a.7.7 0 0 1-.7.7H7.877a.7.7 0 0 1-.7-.7v-8.23h10.646v4.957zm-2.195-10.8l1.2-2.174a.25.25 0 0 0-.436-.244l-1.215 2.2a7.053 7.053 0 0 0-5.754 0l-1.215-2.2a.25.25 0 0 0-.436.244l1.2 2.174A6.252 6.252 0 0 0 5.177 9.61h13.646a6.252 6.252 0 0 0-3.495-5.069zM10 7.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm4 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/></svg>
-          Read the Blog
+          Download Free on the App Store
         </a>
       </div>
     </div>
+  </section>
+
+  <!-- CROSS-PROMO (section) -->
+  <section class="xpromo-section" aria-label="Try HungRecover">
+    <div class="xpromo-card">
+      <span class="xpromo-eyebrow">If you like this app, try this one</span>
+      <h2>Meet <span class="xpromo-accent">HungRecover</span></h2>
+      <p>Free recovery &amp; BAC timing for nights out — from the same indie developer behind IronLog. Live on the App Store now, with a beta list for what's next.</p>
+      <div class="xpromo-actions">
+        <a class="xpromo-btn xpromo-btn-primary" href="https://apps.apple.com/us/app/hungrecover-bac-recovery/id6766139744" target="_blank" rel="noopener">Get HungRecover — Free</a>
+        <a class="xpromo-btn xpromo-btn-ghost" href="https://hungrecover.com/#launch-updates" target="_blank" rel="noopener">Join the beta list</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE APPS -->
+  <section id="more-apps" style="max-width:1000px;margin:0 auto;padding:48px 24px 64px;text-align:center">
+    <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a98a8;margin-bottom:10px">Built by the same founder</span>
+    <h2 style="margin:0 0 24px">3 free apps from the founder of IronLog</h2>
+    <div class="more-apps-grid">
+      <a class="more-app" href="https://apps.apple.com/us/app/hungrecover-bac-recovery/id6766139744" target="_blank" rel="noopener">
+        <strong>HungRecover</strong><span>Recovery &amp; BAC timing for nights out</span><em>Free on App Store ↗</em>
+      </a>
+      <a class="more-app" href="https://apps.apple.com/us/app/gridcrush/id6768498037" target="_blank" rel="noopener">
+        <strong>GridCrush</strong><span>Fast logic puzzle game</span><em>Free on App Store ↗</em>
+      </a>
+      <a class="more-app" href="https://sparkfit.app" target="_blank" rel="noopener">
+        <strong>SPARK</strong><span>Fitness-first connection app</span><em>Beta — join the list ↗</em>
+      </a>
+    </div>
+    <style>
+    .more-apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:760px;margin:0 auto}
+    .more-app{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--surface,#334155);text-decoration:none;transition:transform .15s,border-color .2s}
+    .more-app:hover{transform:translateY(-3px);border-color:var(--accent,#e8483f)}
+    .more-app strong{font-size:1.15rem;color:var(--text,#f5f5f5)}
+    .more-app span{font-size:.9rem;color:var(--text-muted,#9a98a8)}
+    .more-app em{font-style:normal;font-weight:700;font-size:.85rem;color:var(--accent,#e8483f)}
+    </style>
   </section>
 
   <!-- FOOTER -->
@@ -549,13 +693,16 @@
             <span>IRON <span class="accent">LOG</span></span>
           </a>
           <p>Built by lifters, for lifters. Elmira, NY.</p>
+          <p style="margin-top:0.5rem;"><a href="https://instagram.com/gustavopsu" target="_blank" rel="noopener" style="color:var(--text-muted,#9a98a8);margin-right:0.75rem;"><i class="fa-brands fa-instagram"></i> Instagram</a><a href="https://youtube.com/@GusDigitalSolutions" target="_blank" rel="noopener" style="color:var(--text-muted,#9a98a8);"><i class="fa-brands fa-youtube"></i> YouTube</a></p>
+          <p style="margin-top:0.5rem;"><a href="https://gusdigitalsolutions.com" target="_blank" rel="noopener" style="color:var(--primary,#e94560);">A product by Gus Digital Solutions</a></p>
         </div>
         <div class="footer-links">
           <div class="footer-col">
             <h4>Product</h4>
+            <a href="/">Home</a>
+            <a href="#more-apps">Our Apps</a>
             <a href="#features">Features</a>
-            <a href="#release">Current Release</a>
-            <a href="/blog/">Blog</a>
+            <a href="#release">Release Plan</a>
             <a href="#faq">FAQ</a>
           </div>
           <div class="footer-col">
@@ -565,11 +712,17 @@
             <a href="/terms/">Terms of Service</a>
             <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple EULA</a>
           </div>
-          <div class="footer-col">
+           <div class="footer-col">
             <h4>Download</h4>
             <a href="https://apps.apple.com/us/app/ironlog-gym-workout-tracker/id6759731114" target="_blank" rel="noopener">iOS App Store</a>
             <a href="/support/">Support</a>
-            <a href="/blog/">Product Updates</a>
+            <a href="#compare">Feature Roadmap</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="https://instagram.com/gustavopsu" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://youtube.com/@GusDigitalSolutions" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://hungrecover.com/" target="_blank" rel="noopener">Try HungRecover</a>
           </div>
         </div>
       </div>
@@ -679,6 +832,108 @@
             button.disabled = false;
             button.textContent = 'Send Message';
           }
+        }
+      });
+    }
+
+    // Dedicated IronLog updates/beta capture (posts to first-party /api/contact, emails Gus).
+    const betaForm = document.getElementById('beta-form');
+    if (betaForm) {
+      betaForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = betaForm.querySelector('button[type="submit"]');
+        const success = betaForm.querySelector('.beta-success');
+        const formData = new FormData(betaForm);
+        if (button) { button.disabled = true; button.textContent = 'Joining...'; }
+        if (success) { success.style.display = 'none'; success.style.color = '#38bdf8'; }
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(formData.entries()))
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok || !payload.success) throw new Error('beta submit failed');
+          betaForm.reset();
+          if (success) { success.textContent = "You're on the list — we'll email you when there's news."; success.style.display = 'block'; }
+        } catch {
+          if (success) { success.textContent = 'Something went wrong — email gus@gusdigitalsolutions.com to join.'; success.style.color = '#ff6b6b'; success.style.display = 'block'; }
+        } finally {
+          if (button) { button.disabled = false; button.textContent = 'Get IronLog updates'; }
+        }
+      });
+    }
+
+    // Delayed/scroll-triggered update popup.
+    const ctaPopup = document.getElementById('cta-popup');
+    const ctaPopupForm = document.getElementById('cta-popup-form');
+    if (ctaPopup && ctaPopupForm) {
+      const params = new URLSearchParams(window.location.search);
+      const testMode = params.get('popupTest') === '1';
+      const dismissedUntil = Number(localStorage.getItem('ironlogCtaDismissedUntil') || 0);
+      let shown = false;
+      let ctaTimer;
+
+      const showCtaPopup = () => {
+        if (shown || ctaPopup.classList.contains('visible')) return;
+        shown = true;
+        ctaPopup.classList.add('visible');
+        ctaPopup.setAttribute('aria-hidden', 'false');
+        const email = document.getElementById('cta-popup-email');
+        if (email) setTimeout(() => email.focus(), 80);
+      };
+
+      const closeCtaPopup = () => {
+        ctaPopup.classList.remove('visible');
+        ctaPopup.setAttribute('aria-hidden', 'true');
+        if (!testMode) {
+          localStorage.setItem('ironlogCtaDismissedUntil', String(Date.now() + 1000 * 60 * 60 * 24));
+        }
+      };
+
+      ctaPopup.querySelectorAll('[data-popup-close]').forEach(el => el.addEventListener('click', closeCtaPopup));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && ctaPopup.classList.contains('visible')) closeCtaPopup();
+      });
+
+      const triggerAt = 0.42 + Math.random() * 0.18;
+      const onCtaScroll = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        if (scrollable <= 0) return;
+        if ((window.scrollY / scrollable) >= triggerAt) {
+          window.removeEventListener('scroll', onCtaScroll);
+          clearTimeout(ctaTimer);
+          showCtaPopup();
+        }
+      };
+
+      if (testMode || dismissedUntil <= Date.now()) {
+        ctaTimer = setTimeout(showCtaPopup, testMode ? 700 : 18000 + Math.random() * 22000);
+        window.addEventListener('scroll', onCtaScroll, { passive: true });
+      }
+
+      ctaPopupForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = ctaPopupForm.querySelector('button[type="submit"]');
+        const success = ctaPopupForm.querySelector('.cta-popup-success');
+        const formData = new FormData(ctaPopupForm);
+        if (button) { button.disabled = true; button.textContent = 'Joining...'; }
+        if (success) { success.style.display = 'none'; success.style.color = ''; }
+        try {
+          const response = await fetch(ctaPopupForm.dataset.endpoint || '/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(formData.entries()))
+          });
+          const payload = await response.json().catch(() => ({}));
+          if (!response.ok || !payload.success) throw new Error('popup submit failed');
+          ctaPopupForm.reset();
+          localStorage.setItem('ironlogCtaDismissedUntil', String(Date.now() + 1000 * 60 * 60 * 24 * 30));
+          if (success) { success.textContent = "You're on the IronLog update list."; success.style.display = 'block'; }
+        } catch {
+          if (success) { success.textContent = 'Something went wrong. Email gus@gusdigitalsolutions.com to join.'; success.style.color = '#ff6b6b'; success.style.display = 'block'; }
+        } finally {
+          if (button) { button.disabled = false; button.textContent = 'Get updates'; }
         }
       });
     }

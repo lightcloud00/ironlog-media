@@ -1,6 +1,11 @@
 interface Env {
   LEADS?: KVNamespace;
+  RESEND_API_KEY?: string;
 }
+
+/** Escape HTML so user input can't inject markup into the notification email. */
+const escHtml = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 interface LeadPayload {
   name?: unknown;
@@ -115,6 +120,44 @@ async function handleContact(request: Request, env: Env): Promise<Response> {
     );
   } catch {
     return json(request, { error: "Lead storage unavailable" }, 503);
+  }
+
+  // Notify Gus's inbox of the new lead (mirrors the working gusdigitalsolutions
+  // contact.ts Resend pattern). Non-fatal: the KV capture above already
+  // succeeded, so an email hiccup never loses a lead.
+  if (env.RESEND_API_KEY) {
+    try {
+      const safeEmail = escHtml(email);
+      const safeName = escHtml(name);
+      const safeMessage = escHtml(message);
+      const resendResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "IronLog Contact <onboarding@resend.dev>",
+          to: ["lightcloud007@gmail.com"],
+          subject: `New IronLog contact: ${safeName}`,
+          html: `
+            <h2>New IronLog contact form submission</h2>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            <p><strong>Source:</strong> ${escHtml(source)}</p>
+            <p><strong>When:</strong> ${createdAt}</p>
+            <p><strong>Message:</strong></p>
+            <p>${safeMessage.replace(/\n/g, "<br>")}</p>
+          `,
+          reply_to: email,
+        }),
+      });
+      if (!resendResponse.ok) {
+        console.error("[contact] resend error", await resendResponse.text());
+      }
+    } catch (mailErr) {
+      console.error("[contact] resend exception", mailErr);
+    }
   }
 
   return json(request, { success: true });

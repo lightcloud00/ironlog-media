@@ -4,7 +4,14 @@ Per `~/.claude/CLAUDE.md` per-project doctrine. Append-only index; one row per b
 
 ## Open
 
-_None._
+### 2026-05-22 — GH #3: Separate build-candidate feature copy from roadmap claims
+
+- **Filed:** 2026-05-22 by Codex
+- **Status:** fixed-local, deploy/push pending approval
+- **Problem:** Local website WIP mixed current IronLog build-candidate features with proof-gated roadmap claims, including voice/ring-close/demo/competitor framing that should not go live before binary proof.
+- **Fix path:** Home now has current build-candidate feature copy from `/Users/gus/Desktop/fairway/FEATURES.md`, a separate `FEATURES.md Roadmap` table for gated features, and a `Release Status` section that says new build after QA. Privacy, terms, and support now mention local meal entries/notes.
+- **Verification:** Local `python3 -m http.server 8767` route check returned HTTP 200 for `/`, `/privacy/`, `/terms/`, `/support/`, and stylesheet. Grep confirmed current sections present and risky phrases absent.
+- **Reference:** [GH lightcloud00/ironlog-media#3](https://github.com/lightcloud00/ironlog-media/issues/3)
 
 ## Closed
 

@@ -90,8 +90,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .btn-lg { padding: 14px 28px; font-size: 15px; }
 .btn-primary { background: var(--primary); color: #fff; }
 .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 4px 20px var(--primary-glow); }
-.btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
-.btn-secondary:hover { border-color: var(--text-faint); background: var(--bg-3); }
+.btn-secondary { background: var(--bg-3); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--text-muted); background: var(--surface-2); }
 
 /* ─── TOP BAR ─── */
 .top-bar { background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 8px 0; margin-top: 56px; overflow: hidden; }
@@ -473,7 +473,7 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-  .nav { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 24px; gap: 16px; z-index: 99; }
+  .nav { display: none; position: fixed; top: 56px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); flex-direction: column; padding: 24px; gap: 16px; z-index: 100; }
   .nav.open { display: flex; }
   .nav a { font-size: 16px; }
   .mobile-toggle { display: flex; }

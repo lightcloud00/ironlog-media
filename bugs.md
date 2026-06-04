@@ -4,6 +4,14 @@ Per `~/.claude/CLAUDE.md` per-project doctrine. Append-only index; one row per b
 
 ## Open
 
+### 2026-06-04 — UI Fixes: nav z-index, twitter card, btn-secondary contrast
+
+- **Filed:** 2026-06-04 by sisyphus
+- **Status:** resolved, pushed to main (c0ff027)
+- **Problem:** (1) Nav dropdown z-index 99 vs header z-index 100 meant mobile nav links appeared behind header content. (2) twitter:card was "summary" instead of "summary_large_image". (3) btn-secondary used surface-2 (#1e1e3e) background nearly invisible against dark bg (#0d0d1a).
+- **Fix:** style.css nav z-index 99→100; index.html twitter:card summary→summary_large_image; style.css btn-secondary surface-2→bg-3 for visible contrast.
+- **Reference:** ironlog-media@main c0ff027
+
 ### 2026-05-22 — GH #3: Separate build-candidate feature copy from roadmap claims
 
 - **Filed:** 2026-05-22 by Codex

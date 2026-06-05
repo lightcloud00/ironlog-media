@@ -1,0 +1,19 @@
+{
+  "name": "IronLog: Gym Workout Tracker",
+  "short_name": "IronLog",
+  "description": "Local-first iPhone workout and PR tracker with set logging, exercise history, stats, and on-device training data.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/social-card.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["healthcare", "fitness"],
+  "prefer_related_applications": false
+}

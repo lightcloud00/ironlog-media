@@ -2,3 +2,19 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ironlog.co/sitemap.xml
+
+# Prevent AI training crawlers from using content
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AmazonBot
+Disallow: /

@@ -10,14 +10,19 @@ Per `~/.claude/CLAUDE.md` per-project doctrine. Current state + done/pending so 
 - **Routing:** `_routes.json` forces CF Pages function activation
 - **Email obfuscation:** Cloudflare auto-rewrites `mailto:` links at the edge (not a content drift)
 
-## Local state (as of 2026-05-22)
+## Local state (as of 2026-06-07)
 
 - Local WIP now aligns website copy to the IronLog new-build QA lane:
-  - current build-candidate features: PR/set logging, record edit/delete, 62-exercise starter library, Dashboard shortcuts, History day notes, Meal Tracker v1, plate calculator, rest timer, CSV import/export, Settings shortcuts, free-first Pro posture, local-first data
-  - roadmap/gated features: voice logging, Apple Fitness ring-close, Watch, widgets, backend sync, barcode/photo nutrition, AI coaching, public leaderboards, and paid Pro activation
+  - current build-candidate features: PR/set logging, record edit/delete, 110+-exercise library (6 categories), Dashboard shortcuts, History day notes, Meal Tracker v1 (local entries), plate calculator, rest timer, supersets/dropsets/circuits/giant sets, CSV import/export, Settings shortcuts, free-first Pro posture, local-first data
+  - roadmap/gated features: voice logging (needs physical iPhone proof), Apple Fitness ring-close, Watch, widgets, backend sync, barcode/photo nutrition, AI coaching, public leaderboards, and paid Pro activation
 - GitHub tracker: [lightcloud00/ironlog-media#3](https://github.com/lightcloud00/ironlog-media/issues/3)
-- Proof: local route check on port 8767 returned 200 for `/`, `/privacy/`, `/terms/`, `/support/`, and stylesheet; risky public claims were removed from local HTML.
+- Proof: local route check on port 8080 returned 200 for `/`, `/privacy/`, `/terms/`, `/support/`, and stylesheet; risky public claims were removed from local HTML.
 - Stop gate: no push/deploy/ASC metadata save until the exact build candidate is approved.
+- Local changes pending push (as of 2026-06-07):
+  - Exercise count corrected: 62 → 110+ in hero stat, feature card, FAQ, roadmap table
+  - Comparison table: supersets/dropsets/circuits/giant sets moved from roadmap to free column; CSV export moved to free column
+  - New visual sections added: Meal Tracker mockup (macro bars + meal entries) and Exercise Library mockup (category grid + search/filters)
+  - CSS cache-bust updated to `v=20260607-meal-library`
 
 ## Live state (as of 2026-05-14)
 
@@ -27,6 +32,11 @@ Per `~/.claude/CLAUDE.md` per-project doctrine. Current state + done/pending so 
 
 ## Done
 
+- ✅ Exercise count corrected: 62 → 110+ in 4 places (hero stat, feature card, FAQ, roadmap table)
+- ✅ Comparison table fixed: supersets/dropsets/circuits/giant sets → free column; CSV export → free column; program templates remain in roadmap
+- ✅ New Meal Tracker visual section added (macro bars, meal entries mockup)
+- ✅ New Exercise Library visual section added (category grid, search/filters mockup)
+- ✅ CSS cache-bust updated to `v=20260607-meal-library`
 - ✅ Local WIP separates current build-candidate features from roadmap/gated claims (GitHub #3, 2026-05-22; not pushed/deployed)
 - ✅ Free-first review copy aligned with Fairway app (commit `50201d7`, deployed live)
 - ✅ Apple EULA link added to footer + Section 4 of terms (commit `82864b8`)

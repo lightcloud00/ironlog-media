@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="stylesheet" href="style.css?v=20260519-cta-v1">
+  <link rel="stylesheet" href="style.css?v=20260607-meal-library">
 </head>
 <body>
 
@@ -102,7 +102,7 @@
         </a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num">62</span><span class="stat-label">Starter Exercises</span></div>
+        <div class="stat"><span class="stat-num">110+</span><span class="stat-label">Starter Exercises</span></div>
         <div class="stat"><span class="stat-num">PR</span><span class="stat-label">Edit/Delete</span></div>
         <div class="stat"><span class="stat-num">Meals</span><span class="stat-label">Local v1</span></div>
         <div class="stat"><span class="stat-num">Local</span><span class="stat-label">Storage</span></div>
@@ -258,7 +258,7 @@
         <div class="feature-card">
           <div class="feature-num">03</div>
           <h3>Exercise Library</h3>
-          <p>Bundled starter catalog with 62 free exercises, search, filters, quick-add presets, and custom movements.</p>
+          <p>Bundled starter catalog with 110+ free exercises, search, filters, quick-add presets, and custom movements.</p>
         </div>
         <div class="feature-card feature-card--new">
           <div class="feature-num">04</div>
@@ -309,20 +309,168 @@
     </div>
   </section>
 
-  <!-- PR SHARE SECTION -->
-  <section class="pr-share-section">
+  <!-- MEAL TRACKER SECTION -->
+  <section class="meal-tracker-section" id="meals">
     <div class="container">
-      <div class="section-label">PR Tracker Direction</div>
-      <h2>Every PR Deserves<br>Context.</h2>
-      <p>IronLog is moving toward a cleaner native PR tracker: lift history, set context, and progress moments that are easy to understand inside your own training log.</p>
-      <div class="pr-card-demo">
-        <!-- Mock PR card -->
-        <div class="mock-pr-card">
-          <div class="pr-card-header">NEW PERSONAL RECORD</div>
-          <div class="pr-card-exercise">BENCH PRESS</div>
-          <div class="pr-card-stats">225 lbs × 3 reps</div>
-          <div class="pr-card-date">April 9, 2026</div>
-          <div class="pr-card-brand">IRON<span style="color:#e94560">LOG</span></div>
+      <div class="meal-grid">
+        <div class="meal-content">
+          <div class="section-label">Nutrition Tracking</div>
+          <h2>Track Your Fuel.<br>Stay On Top Of Macros.</h2>
+          <p class="meal-desc">Log meals and snacks throughout the day. IronLog tracks calories, protein, carbs, fat, fiber, and sodium — with daily targets that adjust on training days automatically.</p>
+          <ul class="meal-features">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><polyline points="20 6 9 17 15 6 12 9"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>Calories + macros (protein, carbs, fat, fiber, sodium)</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><polyline points="20 6 9 17 15 6 12 9"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>Training-day auto-adjusting targets</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><polyline points="20 6 9 17 15 6 12 9"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>Favorite meals and recent foods for quick entry</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><polyline points="20 6 9 17 15 6 12 9"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>7-day macro averages and trend charts</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2"><polyline points="20 6 9 17 15 6 12 9"/><circle cx="12" cy="12" r="10"/></svg>
+              <span>Local-only — no account, no cloud sync required</span>
+            </li>
+          </ul>
+        </div>
+        <div class="meal-mockup">
+          <div class="phone-frame meal-phone">
+            <div class="phone-screen">
+              <div class="phone-header">
+                <span class="phone-logo">IRON<span class="accent">LOG</span></span>
+                <span class="phone-day">Today</span>
+              </div>
+              <div class="meal-day-summary">
+                <div class="meal-macro-bar">
+                  <div class="meal-macro-label">Protein</div>
+                  <div class="meal-bar-track"><div class="meal-bar-fill" style="width:68%;background:#e94560"></div></div>
+                  <div class="meal-macro-num">102g / 150g</div>
+                </div>
+                <div class="meal-macro-bar">
+                  <div class="meal-macro-label">Carbs</div>
+                  <div class="meal-bar-track"><div class="meal-bar-fill" style="width:52%;background:#f5a623"></div></div>
+                  <div class="meal-macro-num">156g / 300g</div>
+                </div>
+                <div class="meal-macro-bar">
+                  <div class="meal-macro-label">Fat</div>
+                  <div class="meal-bar-track"><div class="meal-bar-fill" style="width:41%;background:#7ed6df"></div></div>
+                  <div class="meal-macro-num">41g / 100g</div>
+                </div>
+                <div class="meal-cal-row">
+                  <span class="meal-cal-num">1,438</span>
+                  <span class="meal-cal-of"> / 2,400 kcal</span>
+                </div>
+              </div>
+              <div class="meal-entries">
+                <div class="meal-entry">
+                  <div class="meal-entry-name">Chicken Breast, Rice, Broccoli</div>
+                  <div class="meal-entry-macros">645 kcal · 62P · 78C · 12F</div>
+                </div>
+                <div class="meal-entry">
+                  <div class="meal-entry-name">Greek Yogurt + Berries</div>
+                  <div class="meal-entry-macros">310 kcal · 28P · 42C · 6F</div>
+                </div>
+                <div class="meal-entry">
+                  <div class="meal-entry-name">Protein Shake</div>
+                  <div class="meal-entry-macros">120 kcal · 24P · 3C · 1F</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXERCISE LIBRARY SECTION -->
+  <section class="library-section" id="library">
+    <div class="container">
+      <div class="section-label">Exercise Library</div>
+      <h2>110+ Exercises.<br>Search, Browse, Done.</h2>
+      <div class="library-grid">
+        <div class="library-categories">
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(233,69,96,0.15);color:#e94560">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Chest</div>
+              <div class="lib-cat-count">12 exercises</div>
+            </div>
+          </div>
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(245,166,35,0.15);color:#f5a623">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Back</div>
+              <div class="lib-cat-count">18 exercises</div>
+            </div>
+          </div>
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(126,214,223,0.15);color:#7ed6df">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Shoulders</div>
+              <div class="lib-cat-count">14 exercises</div>
+            </div>
+          </div>
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(162,155,254,0.15);color:#a29bfe">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Arms</div>
+              <div class="lib-cat-count">16 exercises</div>
+            </div>
+          </div>
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(106,176,76,0.15);color:#6ab04c">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Legs</div>
+              <div class="lib-cat-count">22 exercises</div>
+            </div>
+          </div>
+          <div class="library-category">
+            <div class="lib-cat-icon" style="background:rgba(255,107,107,0.15);color:#ff6b6b">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="lib-cat-name">Core + Other</div>
+              <div class="lib-cat-count">28 exercises</div>
+            </div>
+          </div>
+        </div>
+        <div class="library-search">
+          <div class="lib-search-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9a98a8" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Search 110+ exercises…</span>
+          </div>
+          <div class="lib-filters">
+            <span class="lib-filter active">All</span>
+            <span class="lib-filter">Barbell</span>
+            <span class="lib-filter">Dumbbell</span>
+            <span class="lib-filter">Machine</span>
+            <span class="lib-filter">Cable</span>
+            <span class="lib-filter">Bodyweight</span>
+            <span class="lib-filter">Band</span>
+          </div>
+          <div class="lib-results">
+            <div class="lib-result"><span class="lib-result-name">Barbell Bench Press</span><span class="lib-result-type">Barbell</span></div>
+            <div class="lib-result"><span class="lib-result-name">Incline Dumbbell Press</span><span class="lib-result-type">Dumbbell</span></div>
+            <div class="lib-result"><span class="lib-result-name">Cable Fly</span><span class="lib-result-type">Cable</span></div>
+            <div class="lib-result"><span class="lib-result-name">Push-Up</span><span class="lib-result-type">Bodyweight</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -434,13 +582,13 @@
           <tbody>
             <tr>
               <td>Exercises</td>
-              <td class="compare-good">62 bundled starter exercises, search, filters, quick add</td>
+              <td class="compare-good">110+ bundled starter exercises, search, filters, quick add</td>
               <td><span class="compare-planned">Licensed demos and broader catalog later</span></td>
             </tr>
             <tr>
               <td>Logging</td>
-              <td class="compare-good">PR/set logging, edit/delete, recent context, day notes</td>
-              <td><span class="compare-planned">Supersets, dropsets, giant sets, templates</span></td>
+              <td class="compare-good">PR/set logging, edit/delete, recent context, day notes, supersets/dropsets/circuits/giant sets</td>
+              <td><span class="compare-planned">Program templates (StrongLifts, PPL, 5/3/1, nSuns)</span></td>
             </tr>
             <tr>
               <td>Nutrition</td>
@@ -537,7 +685,7 @@
         </details>
         <details class="faq-item">
           <summary>What exercises are included?</summary>
-          <p>The next build candidate uses a bundled starter catalog with 62 free exercises across major movement categories, plus search, filters, quick-add presets, and custom movements.</p>
+          <p>The next build candidate uses a bundled starter catalog with 110+ free exercises across major movement categories, plus search, filters, quick-add presets, and custom movements.</p>
         </details>
         <details class="faq-item">
           <summary>How is my data stored?</summary>

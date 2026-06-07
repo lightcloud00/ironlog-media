@@ -22,6 +22,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="style.css?v=20260607-meal-library">
+  <!-- JSON-LD: SoftwareApplication + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ironlog.co/#software",
+        "name": "IronLog",
+        "applicationCategory": "HealthAndFitnessApplication",
+        "operatingSystem": "iOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Local-first iPhone workout and PR tracker with set logging, exercise history, stats, and on-device training data.",
+        "url": "https://ironlog.co",
+        "image": "https://ironlog.co/social-card.svg",
+        "author": {
+          "@type": "Organization",
+          "name": "Gus Digital Solutions",
+          "url": "https://gusdigitalsolutions.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gus Digital Solutions",
+          "url": "https://gusdigitalsolutions.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ironlog.co/#organization",
+        "name": "IronLog / Gus Digital Solutions",
+        "url": "https://ironlog.co",
+        "logo": "https://ironlog.co/favicon.svg",
+        "sameAs": [
+          "https://instagram.com/gustavopsu"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ironlog.co/#website",
+        "url": "https://ironlog.co",
+        "name": "IronLog",
+        "description": "Local-first iPhone gym workout and PR tracker — no account required, no ads, no subscription.",
+        "publisher": {
+          "@id": "https://ironlog.co/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ironlog.co?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 

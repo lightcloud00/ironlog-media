@@ -4,30 +4,6 @@ Per `~/.claude/CLAUDE.md` per-project doctrine. Append-only index; one row per b
 
 ## Open
 
-### 2026-06-07 — Exercise count wrong in 4 places (62 vs actual 110+)
-
-- **Filed:** 2026-06-07 by sisyphus
-- **Status:** fixed-local, push-pending-approval
-- **Problem:** Homepage showed "62 exercises" in hero stat, feature card, FAQ answer, and roadmap table. The app actually ships with 110+ exercises (confirmed in `exercises.json`).
-- **Fix:** Updated all 4 locations to 110: hero stat, features grid card, FAQ section, roadmap features table.
-- **Reference:** `index.html` lines ~hero-stat, ~features, ~faq, ~roadmap-table
-
-### 2026-06-07 — Comparison table mislabeled shipped features as roadmap
-
-- **Filed:** 2026-06-07 by sisyphus
-- **Status:** fixed-local, push-pending-approval
-- **Problem:** Roadmap column included supersets, dropsets, circuits, and giant sets — all of which are already shipped in the current build. CSV export was marked as roadmap but is free/shipped.
-- **Fix:** Moved supersets/dropsets/circuits/giant sets to the free column; CSV export moved to free column. Program templates (training plans) remain in roadmap column.
-- **Reference:** `index.html` comparison table section
-
-### 2026-06-07 — New sections: Meal Tracker + Exercise Library (visual mockups)
-
-- **Filed:** 2026-06-07 by sisyphus
-- **Status:** fixed-local, push-pending-approval
-- **Problem:** Homepage lacked visual sections for two shipped features — Meal Tracker (v1, local entries) and Exercise Library (110+ exercises, 6 categories).
-- **Fix:** Added two new `<section>` elements after PR Share section: (1) Meal Tracker with macro bar mockup + meal entries, (2) Exercise Library with category grid + search/filters mockup. Added `.meal-tracker-section` and `.library-section` CSS classes to `style.css`. Updated cache-bust query to `v=20260607-meal-library`.
-- **Reference:** `index.html` sections #meals and #library; `style.css` new classes
-
 ### 2026-06-04 — UI Fixes: nav z-index, twitter card, btn-secondary contrast
 
 - **Filed:** 2026-06-04 by sisyphus
